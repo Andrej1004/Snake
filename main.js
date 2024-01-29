@@ -133,10 +133,10 @@ const Snake = {
 	},
 	eat () {
 		if (this.body[0][0] == Fruit.position_x && this.body[0][1] == Fruit.position_y) {
-			if (this.length<30){
-				this.body.push([this.body[this.length-1][0]+1,this.body[this.length-1][1]]);
-				this.length = this.length+1;
-			}
+			//if (this.length<30){
+			this.body.push([this.body[this.length-1][0]+1,this.body[this.length-1][1]]);
+			this.length = this.length+1;
+			//}
 			Fruit.ChangePosition();
 			Screen.current_score++;
 			score.innerHTML = Screen.current_score;
